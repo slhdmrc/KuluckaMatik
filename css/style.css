@@ -1,0 +1,416 @@
+/* style.css */
+
+.kuluckamatik-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.turuncu-giris {
+    background-color: #ffe8cc;
+    border-color: #ffcc99;
+}
+
+.kuluckamatik-container label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.kuluckamatik-container input,
+.kuluckamatik-container select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.kuluckamatik-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    gap: 10px;
+}
+.kuluckamatik-header-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2a8f4a;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+.kuluckamatik-header-btn {
+    padding: 6px 16px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 0;
+    width: auto;
+    min-width: 0;
+    background-color: #ff8c00 !important;
+    color: #fff !important;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: background 0.2s;
+}
+.kuluckamatik-header-btn:hover {
+    background-color: #e67e00 !important;
+}
+.kuluckamatik-container button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #2a8f4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.kuluckamatik-container button:hover {
+    background-color: #23753d;
+}
+
+/* Turuncu buton sınıfı */
+.turuncu-buton {
+    background-color: #ff8c00 !important; /* Turuncu renk */
+}
+
+.turuncu-buton:hover {
+    background-color: #e67e00 !important; /* Daha koyu turuncu renk */
+}
+
+/* Kayıt kartları container */
+.kayit-kartlari-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+@media (max-width: 900px) {
+    .kayit-kartlari-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .kayit-kartlari-container {
+        grid-template-columns: 1fr;
+    }
+    .kuluckamatik-header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .kuluckamatik-header-title {
+        text-align: center;
+    }
+    .kuluckamatik-header-btn {
+        align-self: flex-end;
+        width: 100%;
+    }
+}
+
+/* Kayıt kartı */
+.kulucka-kart {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.kulucka-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kart-baslik {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kart-icerik {
+    padding: 15px;
+}
+
+.kart-icerik p {
+    margin: 5px 0;
+}
+
+.kart-footer {
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Çöp kutusu ikonu */
+.cop-kutusu {
+    background-color: transparent !important;
+    color: #e74c3c;
+    border: none;
+    width: auto !important;
+    height: auto !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cop-simge {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+
+.basari-mesaj {
+    background-color: #e7f6e7;
+    border: 1px solid #bde5bd;
+    color: #1e7e1e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hata-mesaj {
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    color: #842029;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* İlerleme çubuğu */
+.ilerleme-cubugu-container {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.ilerleme-cubugu {
+    flex-grow: 1;
+    height: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.ilerleme-dolgu {
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Renk tanımlamaları */
+.ilerleme-dolgu.yesil {
+    background-color: #4caf50;
+}
+
+.ilerleme-dolgu.turuncu {
+    background-color: #ff9800;
+}
+
+.ilerleme-dolgu.kirmizi {
+    background-color: #f44336;
+}
+
+.ilerleme-yuzde {
+    width: 45px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.civciv-form {
+    margin-top: 10px;
+}
+
+.civciv-form input {
+    width: 60px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.civciv-sonuc {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Yeni Eklenen Stiller */
+
+/* Isı ve Nem Bilgisi */
+.isi-nem-bilgisi {
+    display: flex;
+    justify-content: space-around; /* Veya space-between */
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+.isi-bilgisi, .nem-bilgisi {
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 4px;
+    display: inline-flex; /* İkon ve metni yan yana hizala */
+    align-items: center;
+    gap: 4px; /* İkon ve metin arası boşluk */
+}
+
+.isi-bilgisi {
+    background-color: #fff0e6; /* Açık turuncu arka plan */
+    color: #e65100; /* Koyu turuncu metin */
+    border: 1px solid #ffcc80; /* Turuncu kenarlık */
+}
+
+.nem-bilgisi {
+    background-color: #e3f2fd; /* Açık mavi arka plan */
+    color: #0d47a1; /* Koyu mavi metin */
+    border: 1px solid #90caf9; /* Mavi kenarlık */
+}
+
+/* Kalan Gün */
+.kart-icerik p strong:contains("Kalan Gün:") { /* Hedefleme için daha spesifik olabilir */
+    font-weight: bold;
+}
+
+/* Geçen Süre Bilgisi */
+.gecen-sure-bilgisi {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* Detayları Yönet Butonu */
+.detay-toggle-buton {
+    display: none !important;
+}
+
+.detay-toggle-buton:hover {
+    background-color: #5a6268 !important;
+}
+
+/* Detaylar Bölümü */
+.detaylar-bolumu {
+    background-color: #fdfdfd;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    display: block !important;
+}
+
+.detaylar-bolumu h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.detaylar-bolumu p {
+    margin-bottom: 10px;
+    display: flex; /* Label ve input'u yan yana getir */
+    align-items: center; /* Dikeyde ortala */
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta geçsin */
+}
+
+.detaylar-bolumu label {
+    font-weight: normal; /* Normal font ağırlığı */
+    margin-right: 10px;
+    flex-basis: 150px; /* Sabit label genişliği */
+    flex-shrink: 0; /* Küçülmesin */
+}
+
+.detaylar-bolumu input[type="number"],
+.detaylar-bolumu textarea {
+    flex-grow: 1; /* Kalan alanı doldur */
+    min-width: 100px; /* Minimum genişlik */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.detaylar-bolumu textarea {
+    resize: vertical; /* Sadece dikeyde boyutlandırma */
+}
+
+
+.kaydet-detay-buton {
+    /* turuncu-buton sınıfı zaten uygulanıyor */
+    width: auto !important; /* Tam genişlik olmasın */
+    padding: 8px 15px !important;
+    display: block; /* Ortalamak için */
+    margin: 15px auto 0 auto; /* Üstten boşluk ve ortala */
+}
+
+/* Detay Mesaj Alanı */
+.detay-mesaj {
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.detay-mesaj.basari-mesaj {
+    background-color: #e7f6e7;
+    border: 1px solid #bde5bd;
+    color: #1e7e1e;
+}
+
+.detay-mesaj.hata-mesaj {
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    color: #842029;
+}
+
+/* İlerleme Çubuğu - Mavi Renk */
+.ilerleme-dolgu.mavi {
+    background-color: #2196F3; /* Mavi renk */
+}
+
+/* Genel Mesaj Alanı Stili */
+#km-mesaj {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Butonla arasına boşluk */
+}
+#km-mesaj.basari-mesaj {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+#km-mesaj.hata-mesaj {
+     background-color: #f8d7da;
+     color: #721c24;
+     border: 1px solid #f5c6cb;
+}
+
+/* Form Alanları Arası Boşluk */
+#kuluckamatik-form label {
+    margin-top: 10px;
+}
+#kuluckamatik-form input,
+#kuluckamatik-form select,
+#kuluckamatik-form textarea {
+    margin-bottom: 10px; /* Elemanlar arasına boşluk */
+}
